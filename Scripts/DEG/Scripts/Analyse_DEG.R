@@ -10,7 +10,7 @@
 ######################## User defined options ########################
 ######################################################################
 # Main directory:
-setwd("C:/Users/dmjde/OneDrive/oud/Documenten/Dirk/School/Jaar 3/Minor/Project/DEG") #Full path of the working directory. 
+setwd("Nuclear-retention-in-response-to-hypoxia-in-plants/Scripts/DEG/Scripts/") #Full path of the working directory. 
 #It must contain: 
 # ** A directory named "Counts" with a delimited file for raw counts. Rows are genes and columns samples.
 # ** A directory named "meta" with a metadata file with information about the samples. Ideally the number of rows in the metadata is the same as in the raw counts.
