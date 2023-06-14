@@ -83,13 +83,13 @@ rule DEG:
     shell:
         "Rscript {Rstudio/Scripts/functions.R} && Rscript {Rstudio/Scripts/Analyse_DEG.R} --counts {input.counts} --metadata {input.metadata} --output {output.deg_results}"
 
-#rule heatmap:
-#    input:
-#        deg_results="Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv",
-#        clustering_script="Rstudio/Scripts/Clustering_Heatmap.R"
-#    output:
-#        heatmap_plot="Rstudio/heatmap/dif_SL_root_07071910_pam_heatmap.pdf"
-#    shell:
+rule heatmap:
+    input:
+        deg_results="Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv",
+        clustering_script="Rstudio/Scripts/Clustering_Heatmap.R"
+    output:
+        heatmap_plot="Rstudio/heatmap/dif_SL_root_07071910_pam_heatmap.pdf"
+    shell:
         "Rscript {input.clustering_script} --deg_results {input.deg_results} --output {output.heatmap_plot}"
 
 rule kallisto_index_RTD3:
