@@ -1,7 +1,51 @@
 # Nuclear-retention-in-response-to-hypoxia-in-plants
 In this workflow, the following steps were followed: 
-The SRA files were downloaded from the NCBI database (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122804).
+
 
 
 flowchart:
 ![project flowchart drawio](https://github.com/de-Laat/Nuclear-retention-in-response-to-hypoxia-in-plants/assets/127954517/43b1d997-95d6-4803-918a-45dc2207e592)
+
+
+The SRA files were downloaded from the NCBI database (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122804).
+Accession code	Condition	SRA file #
+GSM3485774	Nuclear RNA-seq 2NS Rep #1	SRR8234111
+GSM3485775	Nuclear RNA-seq 2HS Rep #1	SRR8234112
+GSM3485776	Nuclear RNA-seq 9NS Rep #1	SRR8234113
+GSM3485777	Nuclear RNA-seq 9HS Rep #1	SRR8234114
+GSM3485778	Nuclear RNA-seq 2NS Rep #2	SRR8234115
+GSM3485779	Nuclear RNA-seq 2HS Rep #2	SRR8234116
+GSM3485780	Nuclear RNA-seq 9NS Rep #2	SRR8234117
+GSM3485781	Nuclear RNA-seq 9HS Rep #2	SRR8234118
+GSM3485782	Nuclear RNA-seq 2NS Rep #3	SRR8234119
+GSM3485783	Nuclear RNA-seq 2HS Rep #3	SRR8234120
+GSM3485784	Nuclear RNA-seq 9NS Rep #3	SRR8234121
+GSM3485785	Nuclear RNA-seq 9HS Rep #3	SRR8234122
+GSM3485786	mRNA-seq 2NS Rep #1	SRR8234123
+GSM3485787	mRNA-seq 2HS Rep #1	SRR8234124
+GSM3485788	mRNA-seq 9NS Rep #1	SRR8234125
+GSM3485789	mRNA-seq 9HS Rep #1	SRR8234126
+GSM3485790	mRNA-seq 2NS Rep #2	SRR8234127
+GSM3485791	mRNA-seq 2HS Rep #2	SRR8234128
+GSM3485792	mRNA-seq 9NS Rep #2	SRR8234129
+GSM3485793	mRNA-seq 9HS Rep #2	SRR8234130
+GSM3485794	mRNA-seq 2NS Rep #3	SRR8234131
+GSM3485795	mRNA-seq 2HS Rep #3	SRR8234132
+GSM3485796	mRNA-seq 9NS Rep #3	SRR8234133
+GSM3485797	mRNA-seq 9HS Rep #3	SRR8234134
+GSM3485798	TRAP-seq 2NS Rep #1	SRR8234135
+GSM3485799	TRAP-seq 2HS Rep #1	SRR8234136
+GSM3485800	TRAP-seq 2NS Rep #2	SRR8234137
+GSM3485801	TRAP-seq 2HS Rep #2	SRR8234138
+GSM3485802	TRAP-seq 2NS Rep #3	SRR8234139
+GSM3485803	TRAP-seq 2HS Rep #3	SRR8234140
+GSM3895497	Nuclear RNA-seq 1R Rep #1	SRR9313569
+GSM3895498	Nuclear RNA-seq 1R Rep #2	SRR9313570
+GSM3895499	Nuclear RNA-seq 1R Rep #3	SRR9313571
+GSM3895500	mRNA-seq 1R Rep #1	SRR9313572
+GSM3895501	mRNA-seq 1R Rep #2	SRR9313573
+GSM3895502	mRNA-seq 1R Rep #3	SRR9313574
+GSM3895503	TRAP-seq 2R Rep #1	SRR9313575
+GSM3895504	TRAP-seq 2R Rep #2	SRR9313576
+GSM3895505	TRAP-seq 2R Rep #3	SRR9313577
+![afbeelding](https://github.com/de-Laat/Nuclear-retention-in-response-to-hypoxia-in-plants/assets/127954517/83ea38df-7b28-46c1-9d13-e70d6289f97c)
