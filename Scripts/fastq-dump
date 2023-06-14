@@ -1,0 +1,5 @@
+for file in SRR*
+do
+    # Run fastq-dump with the --split-3 option
+    fastq-dump --split-3 $file
+done
