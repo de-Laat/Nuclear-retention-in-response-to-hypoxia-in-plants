@@ -1,5 +1,0 @@
-for file in ./*.sam
-
-do 
-  samtools view -bS "$file" > "${file%.sam}.bam"
-done 
