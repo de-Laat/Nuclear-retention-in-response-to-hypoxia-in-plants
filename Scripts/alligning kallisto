@@ -1,1 +1,4 @@
-
+#kallisto making index
+index --index=atRTD3_29122021_index atRTD3_29122021.fa
+#index trimed fasta files
+quant -i ../atRTD3_29122021_index -o SRR8234111 --single -b 100 -l 180 -s 20 -g atRTD3_TS_21Feb22_transfix.gtf ../trimSRR8234111.fastq.gz -t --pseudobam
