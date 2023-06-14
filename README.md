@@ -1,8 +1,9 @@
 # Nuclear-retention-in-response-to-hypoxia-in-plants
 In this workflow is used to analyse the differentially expressed genes and alternative splicing events, the following steps were followed: 
 
+![project flowchart drawio (2)](https://github.com/de-Laat/Nuclear-retention-in-response-to-hypoxia-in-plants/assets/127954517/e38d2e1a-9b6a-4a3e-8a1e-1245fcfb46c9)
 
-![project flowchart drawio](https://github.com/de-Laat/Nuclear-retention-in-response-to-hypoxia-in-plants/assets/127954517/43b1d997-95d6-4803-918a-45dc2207e592)
+
 
 
 The SRA files were downloaded from the NCBI database (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122804).
