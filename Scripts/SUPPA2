@@ -1,1 +1,21 @@
+#generate events
+suppa.py generateEvents -i ../atRTD3_TS_21Feb22_transfix.gtf -o suppa_ioe -f ioe -e SE SS MX RI FL
+suppa.py generateEvents -i ../atRTD3_TS_21Feb22_transfix.gtf -o suppa_ioi -f ioi
+
+#suppa join files
+suppa.py joinFiles -f tpm -i abundanceSRR8234111.txt abundanceSRR8234115.txt abundanceSRR8234119.txt -o all_reps_con1_tpms 
+
+#psiPerEvent
+suppa.py psiPerEvent -e reps_nuc_2ns_tpm/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_2ns_RI
+
+#psiPerIsoform
+suppa.py psiPerIsoform -g atRTD3_TS_21Feb22_transfix.gtf -e test_suppa/all_reps_con1_tpms.tpm -o isoforms/nuc_2ns
+
+#
+suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_MX_strict.ioe -p splice_events/nuc_2hs/nuc_2hs_MX.psi splice_events/nuc_2ns_MX.psi -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm test_suppa/all_reps_con1_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/2_NUC_MX
+suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_RI_strict.ioe -p splice_events/nuc_9hs/nuc_9hs_RI.psi splice_events/nuc_9ns/nuc_9ns_RI.psi -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/9_NUC_RI
+suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_RI_strict.ioe -p splice_events/mrna_2hs/mrna_2hs_RI.psi splice_events/mrna_2ns/mrna_2ns_RI.psi -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/2_mrna_RI
+suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_RI_strict.ioe -p splice_events/mrna_9hs/mrna_9hs_RI.psi splice_events/mrna_9ns/mrna_9ns_RI.psi -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/9_mrna_RI
+suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_RI_strict.ioe -p splice_events/trap_2hs/trap_2hs_RI.psi splice_events/trap_2ns/trap_2ns_RI.psi -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm reps_trap_2ns_tpm/all_reps_con9_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/2_trap_RI
+
 
