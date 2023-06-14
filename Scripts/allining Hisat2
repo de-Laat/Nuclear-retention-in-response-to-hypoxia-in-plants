@@ -1,1 +1,5 @@
+for file in t*.fastq; do
 
+  hisat2 -x index2.idx -U "$file" -S Tair10/"${file}.sam"
+
+done
