@@ -1,0 +1,4 @@
+for file in t*.bam
+do
+  htseq-count -f bam -s no -t gene -i ID "$file" Arabidopsis_thaliana.TAIR10.56.gff3 > counts"$file".txt
+done
