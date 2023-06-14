@@ -1,17 +1,128 @@
 #generate events
 suppa.py generateEvents -i ../atRTD3_TS_21Feb22_transfix.gtf -o suppa_ioe -f ioe -e SE SS MX RI FL
-suppa.py generateEvents -i ../atRTD3_TS_21Feb22_transfix.gtf -o suppa_ioi -f ioi
 
 #suppa join files
 suppa.py joinFiles -f tpm -i abundanceSRR8234111.txt abundanceSRR8234115.txt abundanceSRR8234119.txt -o all_reps_con1_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR8234112.txt abundanceSRR8234116.txt abundanceSRR8234120.txt -o all_reps_con2_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR8234113.txt abundanceSRR8234117.txt abundanceSRR8234121.txt -o all_reps_con3_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR8234114.txt abundanceSRR8234118.txt abundanceSRR8234122.txt -o all_reps_con4_tpms
+suppa.py joinFiles -f tpm -i abundanceSRR8234123.txt abundanceSRR8234127.txt abundanceSRR8234131.txt -o all_reps_con5_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR8234124.txt abundanceSRR8234128.txt abundanceSRR8234132.txt -o all_reps_con6_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR8234125.txt abundanceSRR8234129.txt abundanceSRR8234133.txt -o all_reps_con7_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR8234126.txt abundanceSRR8234130.txt abundanceSRR8234134.txt -o all_reps_con8_tpms
+suppa.py joinFiles -f tpm -i abundanceSRR8234135.txt abundanceSRR8234137.txt abundanceSRR8234139.txt -o all_reps_con9_tpms
+suppa.py joinFiles -f tpm -i abundanceSRR8234136.txt abundanceSRR8234138.txt abundanceSRR8234140.txt -o all_reps_con10_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR9313569.txt abundanceSRR9313570.txt abundanceSRR9313571.txt -o all_reps_con11_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR9313572.txt abundanceSRR9313573.txt abundanceSRR9313574.txt -o all_reps_con12_tpms 
+suppa.py joinFiles -f tpm -i abundanceSRR9313575.txt abundanceSRR9313576.txt abundanceSRR9313577.txt -o all_reps_con13_tpms 
 
-#psiPerEvent
-suppa.py psiPerEvent -e reps_nuc_2ns_tpm/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_2ns_RI
+#psiperEvent
+#con1
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/nuc_2ns_AF 
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/nuc_2ns_A3 
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/nuc_2ns_A5 
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/nuc_2ns_AL 
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/nuc_2ns_MX 
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_2ns_RI 
+suppa.py psiPerEvent -e test_suppa/all_reps_con1_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/nuc_2ns_SE 
+#con2
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/nuc_2hs_SE 
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_2hs_RI 
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/nuc_2hs_MX 
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/nuc_2hs_AL 
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/nuc_2hs_AF 
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/nuc_2hs_A5
+suppa.py psiPerEvent -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/nuc_2hs_A3
+#con3
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_SE
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_MX
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_RI
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_AL
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_A5
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_A3
+suppa.py psiPerEvent -e reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/nuc_9ns/nuc_9ns_AF
+#con4
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_A3
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_A5
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_AF
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_AL
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_MX
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_SE
+suppa.py psiPerEvent -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_9hs/nuc_9hs_RI
+#con5
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_RI
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_MX
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_SE
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_AL
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_AF
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_A5
+suppa.py psiPerEvent -e reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/mrna_2ns/mrna_2ns_A3
+#con6
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_A3
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_A5
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_AL
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_AF
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_MX
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_SE
+suppa.py psiPerEvent -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/mrna_2hs/mrna_2hs_RI
+#con7
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_RI
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_MX
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_SE
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_AL
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_AF
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_A5
+suppa.py psiPerEvent -e reps_mrna_9ns_tpm/all_reps_con7_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/mrna_9ns/mrna_9ns_A3
+#con8
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_A3
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_A5
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_AL
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_AF
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_SE
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_RI
+suppa.py psiPerEvent -e reps_mrna_9hs_tpm/all_reps_con8_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/mrna_9hs/mrna_9hs_MX
+#con9
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/trap_2ns/trap_2ns_MX
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/trap_2ns/trap_2ns_SE
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/trap_2ns/trap_2ns_RI
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/trap_2ns/trap_2ns_AF
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/trap_2ns/trap_2ns_AL
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/trap_2ns/trap_2ns_A5
+suppa.py psiPerEvent -e reps_trap_2ns_tpm/all_reps_con9_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/trap_2ns/trap_2ns_A3
+#con10
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/trap_2hs/trap_2hs_A3
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/trap_2hs/trap_2hs_A5
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/trap_2hs/trap_2hs_AL
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/trap_2hs/trap_2hs_AF
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/trap_2hs/trap_2hs_MX
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/trap_2hs/trap_2hs_SE
+suppa.py psiPerEvent -e reps_trap_2hs_tpm/all_reps_con10_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/trap_2hs/trap_2hs_RI
+#con11
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/nuc_1r/nuc_1r_RI
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/nuc_1r/nuc_1r_MX
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/nuc_1r/nuc_1r_SE
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/nuc_1r/nuc_1r_AF
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/nuc_1r/nuc_1r_AL
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/nuc_1r/nuc_1r_A5
+suppa.py psiPerEvent -e reps_nuc_1r_tpm/all_reps_con11_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/nuc_1r/nuc_1r_A3
+#con12
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/mrna_1r/mrna_1r_A3
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/mrna_1r/mrna_1r_A5
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/mrna_1r/mrna_1r_AL
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/mrna_1r/mrna_1r_AF
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/mrna_1r/mrna_1r_SE
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/mrna_1r/mrna_1r_MX
+suppa.py psiPerEvent -e reps_mrna_1r_tpm/all_reps_con12_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/mrna_1r/mrna_1r_RI
+#con13
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_RI_strict.ioe -o splice_events/trap_2r/trap_2r_RI
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_MX_strict.ioe -o splice_events/trap_2r/trap_2r_MX
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_SE_strict.ioe -o splice_events/trap_2r/trap_2r_SE
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_AL_strict.ioe -o splice_events/trap_2r/trap_2r_AL
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_AF_strict.ioe -o splice_events/trap_2r/trap_2r_AF
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_A5_strict.ioe -o splice_events/trap_2r/trap_2r_A5
+suppa.py psiPerEvent -e reps_trap_2r_tpm/all_reps_con13_tpms.tpm -i suppa_ioe/suppa_ioe_A3_strict.ioe -o splice_events/trap_2r/trap_2r_A3
 
-#psiPerIsoform
-suppa.py psiPerIsoform -g atRTD3_TS_21Feb22_transfix.gtf -e test_suppa/all_reps_con1_tpms.tpm -o isoforms/nuc_2ns
-
-#
+#diffsplice
 suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_MX_strict.ioe -p splice_events/nuc_2hs/nuc_2hs_MX.psi splice_events/nuc_2ns_MX.psi -e reps_nuc_2hs_tpm/all_reps_con2_tpms.tpm test_suppa/all_reps_con1_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/2_NUC_MX
 suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_RI_strict.ioe -p splice_events/nuc_9hs/nuc_9hs_RI.psi splice_events/nuc_9ns/nuc_9ns_RI.psi -e reps_nuc_9hs_tpm/all_reps_con4_tpms.tpm reps_nuc_9ns_tpm/all_reps_con3_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/9_NUC_RI
 suppa.py diffSplice -m empirical -i suppa_ioe/suppa_ioe_RI_strict.ioe -p splice_events/mrna_2hs/mrna_2hs_RI.psi splice_events/mrna_2ns/mrna_2ns_RI.psi -e reps_mrna_2hs_tpm/all_reps_con6_tpms.tpm reps_mrna_2ns_tpm/all_reps_con5_tpms.tpm --save_tpm_events -l 0.05 -pa -gc -c -o diffsplice_events2/2_mrna_RI
