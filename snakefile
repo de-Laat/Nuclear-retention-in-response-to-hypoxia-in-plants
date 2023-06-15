@@ -6,12 +6,16 @@ rule all:
        'Tair10/trimSRR8234111.fastq.bam',
        'Tair10/sortedtrimSRR8234111.fastq.bam',
        'Tair10/sortedtrimSRR8234111.fastq.bam.bai',
-       'Rstudio/Scripts/Analyse_DEG.R',
-       'Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv',
+       "Rstudio/Counts/Counts.txt",
+       "Rstudio/meta/Metadata_3_new.csv",
+       "Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv",
+       "Rstudio/dif_SL_root_070719_k10_GO_IN.txt",
+       "Rstudio/heatmap/dif_SL_root_07071910_pam_heatmap.pdf",
+       "Rstudio/GOslimbarplotBP_1.pdf",
        'atRTD3_29122021_index',
        'RTD3/SRR8234111/abundance.tsv',
-       'suppa_ioe/suppa_ioe_RI_strict.ioe'
-       'test_suppa/all_reps_con1_tpms.tpm'
+       'suppa_ioe/suppa_ioe_RI_strict.ioe',
+       'test_suppa/all_reps_con1_tpms.tpm',
        'splice_events/nuc_2ns_RI.psi'
        
 
@@ -82,18 +86,26 @@ rule DEG:
         counts="Rstudio/Counts/Counts.txt",
         metadata="Rstudio/meta/Metadata_3_new.csv"
     output:
-        deg_results="Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv"
+        deg_results1="Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv",
+        deg_results2="Rstudio/dif_SL_root_070719_k10_GO_IN.txt"
     shell:
         "Rscript {Rstudio/Scripts/functions.R} && Rscript {Rstudio/Scripts/Analyse_DEG.R} --counts {input.counts} --metadata {input.metadata} --output {output.deg_results}"
 
-#rule heatmap:
-#    input:
-#        deg_results="Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv",
-#        clustering_script="Rstudio/Scripts/Clustering_Heatmap.R"
-#    output:
-#        heatmap_plot="Rstudio/heatmap/dif_SL_root_07071910_pam_heatmap.pdf"
-#    shell:
-        "Rscript {input.clustering_script} --deg_results {input.deg_results} --output {output.heatmap_plot}"
+rule heatmap:
+    input:
+        deg_results1="Rstudio/DiffExprs/DEG_AllContrasts_Gitte_Dirk.csv"
+    output:
+        heatmap_plot="Rstudio/heatmap/dif_SL_root_07071910_pam_heatmap.pdf"
+    shell:
+        "Rscript {Rstudio/Scripts/Clustering_Heatmap.R} --deg_results1 {input.deg_results1} --output {output.heatmap_plot}"
+
+rule GEA:
+    input:
+        deg_results2="Rstudio/dif_SL_root_070719_k10_GO_IN.txt"
+    output:
+        barplot="Rstudio/GOslimbarplotBP_1.pdf"
+    shell:
+        "Rscript {Rstudio/Scripts/GEA.R} --deg_results2 {input.deg_results2} --output {output.barplot}
 
 rule kallisto_index_RTD3:
     input:
